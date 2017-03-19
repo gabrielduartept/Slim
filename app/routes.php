@@ -1,7 +1,6 @@
 <?php
 
-$app->get('/', function ($request, $response){
+use \App\Controllers\HomeController;
 
-    return $this->view->render($response, 'home.twig');
 
-});
+$app->get('/users/{id}', HomeController::class . ':index');
